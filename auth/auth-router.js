@@ -9,7 +9,7 @@ router.post("/register", (req, res) => {
 
   Users.register({ username, password: hash })
     .then(user => {
-      res.status(200).json(user);
+      res.status(201).json(user);
     })
     .catch(error => {
       res.status(500).json({ error: `Server could not register user` });
