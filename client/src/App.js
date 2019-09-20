@@ -2,12 +2,14 @@ import React from "react";
 import { Route } from "react-router-dom";
 import JokeList from "./components/JokeList";
 import SignUp from "./components/SignUp";
+import Login from "./components/LoginForm";
 
-const App = () => {
+const App = props => {
   return (
     <>
-      <Route path="/" component={JokeList} />
-      <Route path="/register" component={SignUp} />
+      <Route exact path="/" component={JokeList} />
+      <Route path="/register" {...props} component={SignUp} />
+      <Route path="/login" {...props} component={Login} />
     </>
   );
 };
