@@ -21,5 +21,7 @@ function register(newUser) {
 }
 
 function login(filter) {
-  return db("users").where(filter);
+  return db("users")
+    .where(filter)
+    .first();
 }
