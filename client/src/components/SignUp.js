@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { NavLink } from "react-router-dom";
 
-const SignUp = () => {
+const SignUp = props => {
   const [newUser, setNewUser] = useState({ username: "", password: "" });
 
   const handleChange = e => {
@@ -12,6 +13,7 @@ const SignUp = () => {
     e.preventDefault();
     axios.post("http://localhost:3300/api/auth/register", newUser).then(res => {
       console.log(res.data);
+      props.history.push("/login");
     });
   };
 
@@ -30,6 +32,7 @@ const SignUp = () => {
         onChange={handleChange}
       />
       <button>Register</button>
+      <NavLink to="/">Home</NavLink>
     </form>
   );
 };
