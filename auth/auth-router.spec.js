@@ -6,7 +6,7 @@ describe("auth-router.js", () => {
     // it("should return 201 status for creating user", async () => {
     //   const res = await request(server)
     //     .post("/api/auth/register")
-    //     .send({ username: "testing123", password: "password" });
+    //     .send({ username: "testtest", password: "testtest" });
     //   expect(res.status).toBe(201);
     // });
     // it("should return status 500 if username already exist", async () => {
@@ -21,13 +21,13 @@ describe("auth-router.js", () => {
     // it("should return status 200 if logged in successfully", async () => {
     //   const res = await request(server)
     //     .post("/api/auth/login")
-    //     .send({ username: "testing123", password: "password" });
+    //     .send({ username: "testtest", password: "testtest" });
     //   expect(res.status).toBe(200);
     // });
     // it("should return status 400 if credentials are invalid", async () => {
     //   const res = await request(server)
     //     .post("/api/auth/login")
-    //     .send({ username: "testing123", password: "passwordsadd" });
+    //     .send({ username: "testjkkfnjdnfk", password: "passwordsadfdfsd" });
     //   expect(res.status).toBe(400);
     // });
   });
